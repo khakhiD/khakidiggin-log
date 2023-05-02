@@ -18,7 +18,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
       <a>
         <article
           key={data.id}
-          className="relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-zinc-700 hover:shadow-lg transition-shadow "
+          className="relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-zinc-700 hover:shadow-lg transition ease-in-out transform-gpu duration-500 hover:scale-95 "
         >
           {category && (
             <Category className="absolute top-4 left-4 z-10">
@@ -26,7 +26,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             </Category>
           )}
           {data.thumbnail && (
-            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-zinc-700 ">
+            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-zinc-700 transition ease-in-out transform-gpu duration-500 hover:scale-105">
               <Image
                 src={data.thumbnail}
                 className="object-cover"
