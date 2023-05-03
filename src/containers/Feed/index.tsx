@@ -32,7 +32,6 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
           height: "calc(100vh - 73px)",
         }}
       >
-        {/* <Lists.CategoryList data={categories} /> */}
         <Lists.TagList data={tags} />
       </div>
       <div className="col-span-12 lg:col-span-7">
