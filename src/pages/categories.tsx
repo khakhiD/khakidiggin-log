@@ -1,23 +1,16 @@
 import Layout from "@components/Layout"
 import { CONFIG } from "../../site.config"
 import { NextPageWithLayout } from "./_app"
-import { TPosts, TTags } from "../types"
-import CustomError from "../containers/CustomError"
 
-type Props = {
-  tags: TTags
-  posts: TPosts
+const categories: NextPageWithLayout = () => {
+  return <div>categories</div>
 }
 
-const NotFoundPage: NextPageWithLayout<Props> = () => {
-  return <CustomError />
-}
-
-NotFoundPage.getLayout = (page) => {
+categories.getLayout = (page) => {
   return (
     <Layout
       metaConfig={{
-        title: CONFIG.blog.title,
+        title: `Tags | ${CONFIG.blog.title}`,
         description: CONFIG.blog.description,
         type: "website",
         url: CONFIG.link,
@@ -28,4 +21,4 @@ NotFoundPage.getLayout = (page) => {
   )
 }
 
-export default NotFoundPage
+export default categories

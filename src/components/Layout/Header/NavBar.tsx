@@ -1,7 +1,11 @@
 import Link from "next/link"
 
 const NavBar: React.FC = () => {
-  const links = [{ id: 1, name: "About", to: "/about" }]
+  const links = [
+    { id: 1, name: "Tags", to: "/tags" },
+    { id: 2, name: "Categories", to: "/categories" },
+    { id: 3, name: "About", to: "/about" },
+  ]
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row">

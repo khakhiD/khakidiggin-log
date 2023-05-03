@@ -9,13 +9,13 @@ const CONFIG = {
     linkedin: "morethanmin",
     github: "morethanmin",
     instagram: "",
+    projects: [
+      {
+        name: `morethan-log`,
+        href: "https://github.com/morethanmin/morethan-log",
+      },
+    ],
   },
-  projects: [
-    {
-      name: `morethan-log`,
-      href: "https://github.com/morethanmin/morethan-log",
-    },
-  ],
   // blog setting (required)
   blog: {
     title: "morethan-log",

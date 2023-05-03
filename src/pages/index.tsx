@@ -28,7 +28,7 @@ export async function getStaticProps() {
         },
         posts: filteredPost,
       },
-      revalidate: 1,
+      revalidate: 50,
     }
   } catch (error) {
     throw error
@@ -45,7 +45,7 @@ const FeedPage: NextPageWithLayout<Props> = ({ categories, tags, posts }) => {
   return <Feed categories={categories} tags={tags} posts={posts} />
 }
 
-FeedPage.getLayout = function getlayout(page) {
+FeedPage.getLayout = (page) => {
   return (
     <Layout
       metaConfig={{
