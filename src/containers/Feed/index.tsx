@@ -7,6 +7,7 @@ import { TCategories, TPosts, TTags } from "@customTypes/index"
 import SearchInput from "./components/SearchInput"
 import { FeedHeader } from "./components/FeedHeader"
 import Footer from "./components/Footer"
+import PostCard from "@/src/components/PostCard"
 
 type Props = {
   categories: TCategories
@@ -14,45 +15,30 @@ type Props = {
   posts: TPosts
 }
 
-const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
-  const [q, setQ] = useState("")
-
-  //   .box {
-  //     -ms-overflow-style: none;
-  //     scrollbar-width: none;
-  // }
-  // .box::-webkit-scrollbar {
-  //     display: none;
-  // }
+const Feed: React.FC<Props> = ({ posts }) => {
   return (
-    <div className="block md:grid grid-cols-12 gap-6">
-      <div
-        className="common-no-scroll-bar sticky top-[73px] hidden lg:block col-span-2 overflow-scroll"
-        style={{
-          height: "calc(100vh - 73px)",
-        }}
-      >
-        <Lists.TagList data={tags} />
-      </div>
-      <div className="col-span-12 lg:col-span-7">
-        <Cards.MobileProfileCard />
-        <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
-        <Lists.TagList className="block lg:hidden" data={tags} />
-        <FeedHeader categories={categories} />
-        <Lists.PostList q={q} posts={posts} />
-        <Footer className="block lg:hidden flex justify-center pb-8" />
-      </div>
-      <div
-        className="common-no-scroll-bar sticky top-[73px] hidden lg:block lg:col-span-3 overflow-scroll"
-        style={{
-          height: "calc(100vh - 73px)",
-        }}
-      >
+    <div className="">
+      {/* <div className="grid grid-cols-2 gap-4">
         <Cards.ProfileCard />
-        <Cards.ServiceCard />
-        <Cards.ContactCard />
-        <Footer className="pt-4" />
+        <div>
+          <Cards.ServiceCard />
+          <Cards.ContactCard />
+        </div>
+      </div> */}
+      <div className="text-black dark:text-white mb-4 text-2xl font-bold md:text-3xl lg:mb-8">
+        Latest Posts💫
       </div>
+      <div className="my-2 grid grid-cols-2 gap-8">
+        {!posts.length && (
+          <p className="text-black dark:text-white">Nothing! 😺</p>
+        )}
+        {posts.map((post) => (
+          <PostCard key={post.id} data={post} />
+        ))}
+      </div>
+      <Footer className="block flex justify-center pb-8" />
+
+      {/* <Footer className="pt-4" /> */}
     </div>
   )
 }
