@@ -51,7 +51,7 @@ const CONFIG = {
     },
   },
   utterances: {
-    enable: true,
+    enable: false,
     config: {
       repo: "khakhid/khakid_log",
       "issue-term": "og:title",
