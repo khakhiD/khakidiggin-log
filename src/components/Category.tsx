@@ -38,7 +38,7 @@ const Category: React.FC<Props> = ({
       className={[
         getColorClassByName(children),
         !readOnly ? "cursor-pointer" : "",
-        "opacity-90 px-2 py-1 text-sm rounded-full w-fit",
+        "opacity-90 px-2 py-1 text-sm rounded-md w-fit",
         className,
       ].join(" ")}
     >
