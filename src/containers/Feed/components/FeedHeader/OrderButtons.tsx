@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import Image from "next/image"
 import React from "react"
 
 type TOrder = "asc" | "desc"
@@ -20,26 +21,26 @@ const OrderButtons: React.FC<Props> = () => {
   }
   return (
     <div className={`flex text-sm gap-2  `}>
-      <a
+      {currentOrder === "desc" && <a
         className={`cursor-pointer ${
           currentOrder === "desc"
             ? "text-black font-bold dark:text-white"
             : "text-gray-500 dark:text-gray-400"
         }`}
-        onClick={() => handleClickOrderBy("desc")}
+        onClick={() => handleClickOrderBy("asc")}
       >
-        Desc
-      </a>
-      <a
+        <Image className={`hover:rounded-md hover:bg-white transition-shadow`} src="/icons/sort-descending.svg" alt="asc" width="24" height="24" />
+      </a>}
+      {currentOrder === "asc" && <a
         className={`cursor-pointer ${
           currentOrder === "asc"
             ? "text-black font-bold dark:text-white"
             : "text-gray-500 dark:text-gray-400"
         }`}
-        onClick={() => handleClickOrderBy("asc")}
+        onClick={() => handleClickOrderBy("desc")}
       >
-        Asc
-      </a>
+        <Image className={`hover:rounded-md hover:bg-white transition-shadow`} src="/icons/sort-ascending.svg" alt="asc" width="24" height="24" />
+      </a>}
     </div>
   )
 }
