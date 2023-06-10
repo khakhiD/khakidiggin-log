@@ -29,7 +29,7 @@ const OrderButtons: React.FC<Props> = () => {
         }`}
         onClick={() => handleClickOrderBy("asc")}
       >
-        <Image className={`hover:rounded-md hover:bg-white transition-shadow`} src="/icons/sort-descending.svg" alt="asc" width="24" height="24" />
+        <Image className={`hover:rounded-md hover:bg-white transition-shadow`} src="/icons/sort-descending.svg" alt="desc" width="24" height="24" />
       </a>}
       {currentOrder === "asc" && <a
         className={`cursor-pointer ${
