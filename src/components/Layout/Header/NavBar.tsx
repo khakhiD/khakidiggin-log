@@ -11,7 +11,7 @@ const NavBar: React.FC = () => {
             className="block ml-4 text-black text-gray-500 dark:text-white nav"
           >
             <Link href={link.to}>
-              <a>{link.name}</a>
+              <a className="font-medium hover:font-semi-bold hover:text-sky-500 dark:font-semi-bold dark:hover:text-sky-400">{link.name}</a>
             </Link>
           </li>
         ))}
