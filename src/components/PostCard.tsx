@@ -18,25 +18,25 @@ const PostCard: React.FC<Props> = ({ data }) => {
       <a>
         <article
           key={data.id}
-          className="relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-zinc-700 hover:shadow-md hover:bg-white transition-shadow "
+          className="group relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-zinc-700 hover:shadow-md hover:bg-white transition-shadow transition:duration-500"
         >
           {category && (
-            <Category className="absolute top-4 left-4 z-10">
+            <Category className="absolute top-4 right-4 z-10">
               {category}
             </Category>
           )}
           {data.thumbnail && (
-            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 dark:bg-zinc-700 ">
+            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 overflow-hidden dark:bg-zinc-700">
               <Image
                 src={data.thumbnail}
-                className="object-cover"
-                layout="fill"
                 alt={data.title}
+                className="object-cover transition duration-500 group-hover:scale-105"
+                layout="fill"
               />
             </div>
           )}
           <div
-            className={["p-4", !data.thumbnail && category ? "pt-14" : ""].join(
+            className={["p-4", !data.thumbnail && category ? "pt-10" : ""].join(
               " "
             )}
           >
@@ -70,17 +70,17 @@ const PostCard: React.FC<Props> = ({ data }) => {
                   CONFIG.lang
                 )}
               </div>
+              <div className="flex gap-2">
+                {data.tags &&
+                  data.tags.map((tag: string, idx: number) => (
+                    <Tag key={idx}>{tag}</Tag>
+                ))}
+              </div>
             </div>
             <div className="mb-4">
               <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
                 {data.summary}
               </p>
-            </div>
-            <div className="flex gap-2">
-              {data.tags &&
-                data.tags.map((tag: string, idx: number) => (
-                  <Tag key={idx}>{tag}</Tag>
-                ))}
             </div>
           </div>
         </article>
