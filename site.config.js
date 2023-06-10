@@ -4,27 +4,27 @@ const CONFIG = {
     name: "khakiD",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "Frontend Developer",
-    bio: "카키디 기술 블로그",
+    bio: "아~ 완벽히 이해했어! (이해못했음)",
     email: "kakkiid@kakao.com",
     linkedin: "dongho-shin-1b5147244",
     github: "khakhid",
     instagram: "",
   },
-  projects: [
-    {
-      name: `khakidigin-log`,
-      href: "https://github.com/morethanmin/khakid_log",
-    },
-  ],
+  // projects: [
+  //   {
+  //     name: `khakidigin-log`,
+  //     href: "https://github.com/morethanmin/khakid_log",
+  //   },
+  // ],
   // blog setting (required)
   blog: {
-    title: "khakidigin-log",
-    description: "카키디 삽질 블로그",
+    title: "Khaki-Diggin-Log💦",
+    description: "카키디의 프론트엔드 개발 삽질 기록장",
     theme: "auto", // ['light', 'dark', 'auto']
   },
 
   // CONFIG configration (required)
-  link: "https://khakid-log.vercel.app",
+  link: "https://khakidiggin-log.vercel.app",
   since: 2023, // If leave this empty, current year will be used.
   lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app/khakid-digin-log.png?theme=dark&md=1&fontSize=125px&images=https%3A%2F%2Fmorethan-log.vercel.app%2Favatar.svg&images=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F74141521%3Fv%3D4", // The link to generate OG image, don't end with a slash
