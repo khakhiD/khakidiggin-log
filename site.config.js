@@ -20,7 +20,7 @@ const CONFIG = {
   blog: {
     title: "Khaki-Diggin-Log💦",
     description: "카키디의 프론트엔드 개발 삽질 기록장",
-    theme: "light", // ['light', 'dark', 'auto']
+    theme: "auto", // ['light', 'dark', 'auto']
   },
 
   // CONFIG configration (required)
