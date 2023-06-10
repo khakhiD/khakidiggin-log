@@ -17,6 +17,8 @@ const CustomError: React.FC<Props> = ({ errorType }) => {
           <div>4</div>
         </div>
         <div className="text-3xl text-gray-500">Post not found</div>
+        <p>노션 API 에러의 가능성이 높습니다.<br/>
+        새로고침을 시도해보세요.</p>
       </div>
     </div>
   )
