@@ -1,4 +1,4 @@
-export const DEFAULT_CATEGORY = "📂 All" as const
+export const DEFAULT_CATEGORY = "All" as const
 export const COLOR_SET: { [key: string]: string } = {
   0: "bg-sky-200",
   1: "bg-rose-200",
