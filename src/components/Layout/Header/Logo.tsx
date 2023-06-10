@@ -9,9 +9,9 @@ const Logo: React.FC<Props> = () => {
     <Link href="/">
       <a aria-label={CONFIG.blog.title}>
         <div className="flex items-center">
-          <div className="ml-2 text-black dark:text-white header-name">
-            {CONFIG.blog.title}
-          </div>
+          <span className={`text-md text-gray-700 font-bold hover:text-sky-600  dark:hover:text-sky-400 dark:text-white`}>
+              {CONFIG.blog.title}
+          </span>
         </div>
       </a>
     </Link>
