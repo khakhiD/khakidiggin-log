@@ -10,12 +10,12 @@ const CONFIG = {
     github: "khakhid",
     instagram: "",
   },
-  // projects: [
-  //   {
-  //     name: `khakidigin-log`,
-  //     href: "https://github.com/morethanmin/khakid_log",
-  //   },
-  // ],
+  projects: [
+    {
+      name: `khakidigin-log`,
+      href: "https://github.com/morethanmin/khakid_log",
+    },
+  ],
   // blog setting (required)
   blog: {
     title: "Khaki-Diggin-Log💦",
