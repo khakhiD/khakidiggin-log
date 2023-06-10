@@ -36,7 +36,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             </div>
           )}
           <div
-            className={["p-4", !data.thumbnail && category ? "pt-10" : ""].join(
+            className={["p-4", !data.thumbnail && category ? "pt-7" : ""].join(
               " "
             )}
           >
