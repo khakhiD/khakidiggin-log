@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Inter";
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
-  font-family: "Pretendard", "Roboto", sans-serif;
+  font-family: "Pretendard", "Nexon Lv2 Gothic", "Inter", "Roboto", sans-serif;
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
 }
@@ -13,6 +25,7 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  background-color: hsl(210deg 18% 96%);
 }
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
@@ -22,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 ::selection {
-  background: rgba(45, 170, 219, 0.3);
+  background: rgba(82, 192, 236, 0.3);
 }
 
 .common-no-scroll-bar {
