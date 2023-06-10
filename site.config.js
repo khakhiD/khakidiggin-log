@@ -12,15 +12,15 @@ const CONFIG = {
   },
   projects: [
     {
-      name: `khakidigin-log`,
-      href: "https://github.com/morethanmin/khakid_log",
+      name: `khakidiggin-log`,
+      href: "https://github.com/khakhid/khakidiggin-log",
     },
   ],
   // blog setting (required)
   blog: {
     title: "Khaki-Diggin-Log💦",
     description: "카키디의 프론트엔드 개발 삽질 기록장",
-    theme: "auto", // ['light', 'dark', 'auto']
+    theme: "light", // ['light', 'dark', 'auto']
   },
 
   // CONFIG configration (required)
