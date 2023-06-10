@@ -1,6 +1,7 @@
 import { TPost } from "@/src/types"
 import { CONFIG } from "site.config"
 import dynamic from "next/dynamic"
+import ReactFragment from "react"
 
 const UtterancesComponent = dynamic(
   () => {
@@ -21,11 +22,16 @@ type Props = {
 
 const CommentBox: React.FC<Props> = ({ data }) => {
   return (
-    <div>
-      {CONFIG.utterances.enable && <UtterancesComponent issueTerm={data.id} />}
-      {CONFIG.cusdis.enable && (
-        <CusdisComponent id={data.id} slug={data.slug} title={data.title} />
-      )}
+    <div className="mt-10">
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <div className="mt-5">
+        {CONFIG.utterances.enable && (
+          <UtterancesComponent issueTerm={data.id} />
+        )}
+        {CONFIG.cusdis.enable && (
+          <CusdisComponent id={data.id} slug={data.slug} title={data.title} />
+        )}
+      </div>
     </div>
   )
 }

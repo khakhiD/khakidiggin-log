@@ -51,9 +51,9 @@ const CONFIG = {
     },
   },
   utterances: {
-    enable: false,
+    enable: true,
     config: {
-      repo: "khakhid/khakid_log",
+      repo: "khakhid/khakidiggin-log",
       "issue-term": "og:title",
       label: "💬 Utterances",
     },
