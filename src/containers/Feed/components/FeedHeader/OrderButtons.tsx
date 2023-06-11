@@ -1,6 +1,8 @@
 import { useRouter } from "next/router"
 import Image from "next/image"
 import React from "react"
+import AscIcon from '@/public/icons/sort-ascending.svg';
+import DescIcon from '@/public/icons/sort-descending.svg';
 
 type TOrder = "asc" | "desc"
 
@@ -29,7 +31,7 @@ const OrderButtons: React.FC<Props> = () => {
         }`}
         onClick={() => handleClickOrderBy("asc")}
       >
-        <Image className={`hover:rounded-md hover:bg-white transition-shadow`} src="/icons/sort-descending.svg" alt="desc" width="24" height="24" />
+        <DescIcon className={`stroke-black hover:rounded-md hover:bg-white transition-shadow dark:stroke-white dark:hover:stroke-black dark:hover:bg-gary-300`} alt="now:desc" width="24" height="24" />
       </a>}
       {currentOrder === "asc" && <a
         className={`cursor-pointer ${
@@ -39,7 +41,7 @@ const OrderButtons: React.FC<Props> = () => {
         }`}
         onClick={() => handleClickOrderBy("desc")}
       >
-        <Image className={`hover:rounded-md hover:bg-white transition-shadow`} src="/icons/sort-ascending.svg" alt="asc" width="24" height="24" />
+        <AscIcon className={`stroke-black hover:rounded-md hover:bg-white transition-shadow dark:stroke-white dark:hover:stroke-black dark:hover:bg-gary-300`} alt="now:asc" width="24" height="24" />
       </a>}
     </div>
   )
