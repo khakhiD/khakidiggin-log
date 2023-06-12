@@ -18,7 +18,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
       <a>
         <article
           key={data.id}
-          className="group relative overflow-hidden mb-6 md:mb-8 rounded-2xl bg-white dark:bg-zinc-900"
+          className="group relative overflow-hidden mb-6 md:mb-10 rounded-2xl bg-white dark:bg-zinc-900"
         >
           {category && (
             <Category className="absolute top-4 right-4 z-10">
@@ -26,7 +26,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             </Category>
           )}
           {data.thumbnail && (
-            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-gray-200 overflow-hidden dark:bg-zinc-700 rounded-2xl">
+            <div className="relative w-full pb-[66%] lg:pb-[50%] bg-white overflow-hidden dark:bg-zinc-900 rounded-2xl">
               <Image
                 src={data.thumbnail}
                 alt={data.title}
@@ -41,7 +41,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
             )}
           >
             <header className="flex flex-col justify-between md:flex-row md:items-baseline">
-              <h2 className="text-lg md:text-xl font-medium mb-2 cursor-pointer text-black dark:text-gray-100">
+              <h2 className="text-lg md:text-xl font-medium mb-2 cursor-pointer text-black dark:text-gray-100 group-hover:underline decoration-sky-500 underline-offset-4 dark:decoration-sky-400">
                 {data.title}
               </h2>
             </header>
@@ -78,7 +78,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
               </div>
             </div>
             <div className="mb-4">
-              <p className="hidden md:block leading-8 text-gray-700 dark:text-gray-300">
+              <p className="hidden md:block leading-6 text-gray-700 dark:text-zinc-300">
                 {data.summary}
               </p>
             </div>
