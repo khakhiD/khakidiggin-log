@@ -3,6 +3,7 @@ import { TPosts } from "@/src/types"
 import { useRouter } from "next/router"
 import React, { useEffect, useState } from "react"
 import { DEFAULT_CATEGORY } from "@/src/constants"
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
 
 type Props = {
   q: string
@@ -13,7 +14,7 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
   const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1)
   const [filteredPosts, setFilteredPosts] = useState(posts)
-  const postsPerPage = 20
+  const postsPerPage = 7
 
   const currentTag = `${router.query.tag || ``}` || undefined
   const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
@@ -57,6 +58,7 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
 
   // Handle pagination
   const handlePageChange = (page: number) => {
+    if (page === 0) return;
     setCurrentPage(page)
     window.scrollTo(0, 0) // Scroll to top of the page
   }
@@ -84,20 +86,26 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
       </div>
 
       {/* Render pagination */}
-      <div className="flex justify-center mb-8">
+      <div className="flex justify-center content-center my-8">
+        <button onClick={() => handlePageChange(!(currentPage === 0) ? currentPage - 1 : 0)} className="text-3xl text-gray-700 dark:text-white hover:text-sky-500 dark:hover:text-sky-400">
+          <BiChevronLeft />
+        </button>
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
           <button
             key={page}
             onClick={() => handlePageChange(page)}
             className={`mx-2 ${
               currentPage === page ?
-              "w-4 h-6 rounded-md font-bold text-gray-500 dark:text-white hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900" :
-              "w-4 h-6 rounded-md text-gray-500 dark:text-white dark:text-white hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900"
+              "w-[30px] h-[30px] rounded-md font-bold text-gray-500 dark:text-white hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900" :
+              "w-[30px] h-[30px] rounded-md text-gray-500 dark:text-white dark:text-white hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900"
             }`}
           >
             {page}
           </button>
         ))}
+        <button onClick={() => handlePageChange(currentPage !== totalPages ? currentPage + 1 : 0)} className="text-3xl text-gray-700 dark:text-white hover:text-sky-500 dark:hover:text-sky-400">
+          <BiChevronRight />
+        </button>
       </div>
 
     </>
