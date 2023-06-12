@@ -27,9 +27,9 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
   return (
     <div className="block md:grid grid-cols-12 gap-6">
       <div
-        className="common-no-scroll-bar sticky top-[73px] hidden lg:block col-span-2 overflow-scroll"
+        className="common-no-scroll-bar sticky top-[81px] hidden lg:block col-span-2 overflow-scroll"
         style={{
-          height: "calc(100vh - 73px)",
+          height: "calc(100vh - 81px)",
         }}
       >
         {/* <Lists.CategoryList data={categories} /> */}
@@ -44,11 +44,7 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
         <Footer className="block lg:hidden flex justify-center pb-8" />
       </div>
       <div
-        className="common-no-scroll-bar hidden lg:block lg:col-span-3 overflow-scroll"
-        style={{
-          height: "calc(100vh - 73px)",
-        }}
-      >
+        className="common-no-scroll-bar hidden lg:block lg:col-span-3 overflow-scroll">
         <Cards.ProfileCard />
         {/* <Cards.ServiceCard /> */}
         <Cards.ContactCard />
