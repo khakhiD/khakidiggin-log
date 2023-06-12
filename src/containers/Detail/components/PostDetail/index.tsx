@@ -82,7 +82,7 @@ const PostDetail: React.FC<Props> = ({ blockMap, data }) => {
 
   return (
     <div
-      className={`m-auto max-w-4xl bg-white dark:bg-zinc-700 rounded-3xl py-12 px-6 shadow-md mb-6`}
+      className={`m-auto max-w-4xl py-12 px-6 mb-6`}
     >
       <article className=" m-auto max-w-2xl">
         {category && (
