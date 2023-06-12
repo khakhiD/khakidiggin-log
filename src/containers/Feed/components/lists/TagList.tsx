@@ -36,7 +36,7 @@ const TagList: React.FC<Props> = ({ className, data }) => {
     <div className={className}>
       <div className="hidden lg:block p-1 mb-3 font-bold dark:text-white">Tags</div>
       <ul className="gap-1 flex mobile-x-scroll lg:block mb-6">
-        {Object.keys(data).map((key) => (
+        {Object.keys(data).sort().map((key) => (
           <li
             key={key}
             className={`cursor-pointer text-sm p-1 px-4 my-1 flex-shrink-0 rounded-xl text-gray-500 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-zinc-800 transition duration-500 ${
