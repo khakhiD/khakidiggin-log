@@ -60,6 +60,24 @@ const Footer: React.FC<Props> = () => {
           </div>
         </div>
       </div>
+      <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400 mt-20">
+        <a>
+          <button
+            onClick={() => router.push("/")}
+            className="cursor-pointer hover:text-sky-500 dark:hover:text-sky-400"
+          >
+            ← Back
+          </button>
+        </a>
+        <a>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="cursor-pointer hover:text-sky-500 dark:hover:text-sky-400"
+          >
+            ↑ Top
+          </button>
+        </a>
+      </div>
     </div>
   )
 }
