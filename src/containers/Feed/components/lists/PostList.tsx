@@ -11,7 +11,9 @@ type Props = {
 
 const PostList: React.FC<Props> = ({ q, posts }) => {
   const router = useRouter()
+  const [currentPage, setCurrentPage] = useState(1)
   const [filteredPosts, setFilteredPosts] = useState(posts)
+  const postsPerPage = 20
 
   const currentTag = `${router.query.tag || ``}` || undefined
   const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
@@ -50,18 +52,54 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
     })
   }, [q, currentTag, currentCategory, currentOrder, setFilteredPosts, posts])
 
+  // Calculate total number of pages
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage)
+
+  // Handle pagination
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    window.scrollTo(0, 0) // Scroll to top of the page
+  }
+
+  // Calculate the index of the last post on the current page
+  const indexOfLastPost = currentPage * postsPerPage
+
+  // Calculate the index of the first post on the current page
+  const indexOfFirstPost = indexOfLastPost - postsPerPage
+
+  // Get the current posts to display on the current page
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
+
   return (
     <>
       <div className="my-2">
-        {!filteredPosts.length && (
+        {!currentPosts.length && (
           <div className="flex justify-center p-5 align-center">
             <p className="text-gray-500 dark:text-gray-300">검색 결과 없음(⊙_⊙;)</p>
-          </div>
+        </div>
         )}
-        {filteredPosts.map((post) => (
+        {currentPosts.map((post) => (
           <PostCard key={post.id} data={post} />
         ))}
       </div>
+
+      {/* Render pagination */}
+      <div className="flex justify-center mb-8">
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+          <button
+            key={page}
+            onClick={() => handlePageChange(page)}
+            className={`mx-2 ${
+              currentPage === page ?
+              "w-4 h-6 rounded-md font-bold text-gray-500 dark:text-white hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900" :
+              "w-4 h-6 rounded-md text-gray-500 dark:text-white dark:text-white hover:text-white hover:bg-sky-500 dark:hover:bg-sky-900"
+            }`}
+          >
+            {page}
+          </button>
+        ))}
+      </div>
+
     </>
   )
 }
