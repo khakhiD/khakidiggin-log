@@ -10,17 +10,17 @@ const MobileProfileCard: React.FC<Props> = () => {
   return (
     <div className="block lg:hidden">
       {/* <div className="p-1 mb-3 dark:text-white">💻 Profile</div> */}
-      <div className="p-2 rounded-2xl bg-white dark:bg-zinc-700 mb-4">
-        <div className="flex items-center gap-2">
+      <div className="p-2 rounded-2xl mb-4">
+        <div className="flex items-center gap-6">
           <Image
-            src={CONFIG.profile.image}
-            width={90}
-            height={90}
-            alt="profile_image"
-            className="relative"
+                className="rounded-full"
+                src="https://avatars.githubusercontent.com/u/74141521?v=4"
+                alt="profile-image"
+                width={90}
+                height={90}
           />
           <div className="h-fit dark:text-white">
-            <div className=" text-xl  italic font-bold">
+            <div className=" text-xl font-bold">
               {CONFIG.profile.name}
             </div>
             <div className="text-sm text-gray-500 mb-2 dark:text-gray-400">

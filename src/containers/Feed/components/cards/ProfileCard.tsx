@@ -10,12 +10,19 @@ const ProfileCard: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
       {/* <div className="p-1 mb-3 dark:text-white">💻 Profile</div> */}
-      <div className="rounded-2xl bg-white dark:bg-zinc-700 w-full md:p-4 lg:p-4 mb-9">
-        <div className="relative w-full after:content-[''] after:block after:pb-[100%]">
-          <Image src={CONFIG.profile.image} layout="fill" alt="" />
+      <div className="rounded-2xl bg-white dark:bg-zinc-900 w-full md:p-4 lg:p-4 mb-9">
+        <div className="relative w-full rounded-full overflow-hidden bg-gray-100 after:content-[''] after:block after:pb-[100%]">
+          <Image
+                className="rounded-full"
+                src="https://avatars.githubusercontent.com/u/74141521?v=4"
+                alt="profile-image"
+                width={200}
+                height={200}
+                layout="fill"
+          />
         </div>
-        <div className="bg-white p-2 flex flex-col items-center dark:bg-zinc-700 dark:text-white">
-          <div className=" text-xl italic font-bold">{CONFIG.profile.name}</div>
+        <div className="p-2 flex flex-col items-center dark:text-white">
+          <div className=" text-xl font-bold">{CONFIG.profile.name}</div>
           <div className="text-sm mb-4 text-gray-500 dark:text-gray-400">
             {CONFIG.profile.role}
           </div>
