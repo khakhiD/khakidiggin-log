@@ -10,8 +10,8 @@ const ProfileCard: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
       {/* <div className="p-1 mb-3 dark:text-white">💻 Profile</div> */}
-      <div className="rounded-2xl bg-white dark:bg-zinc-900 w-full md:p-4 lg:p-4 mb-9">
-        <div className="relative w-full rounded-full overflow-hidden bg-gray-100 after:content-[''] after:block after:pb-[100%]">
+      <div className="rounded-2xl w-full md:p-4 lg:p-4 mb-9">
+        <div className="relative w-full rounded-full overflow-hidden after:content-[''] after:block after:pb-[100%]">
           <Image
                 className="rounded-full"
                 src="https://avatars.githubusercontent.com/u/74141521?v=4"
