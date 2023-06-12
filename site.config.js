@@ -18,8 +18,8 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "Khaki-Diggin-Log💦",
-    description: "카키디의 프론트엔드 개발 삽질 기록장",
+    title: "khakidigginlog💦",
+    description: "카키디 프론트엔드 개발 블로그",
     theme: "auto", // ['light', 'dark', 'auto']
   },
 

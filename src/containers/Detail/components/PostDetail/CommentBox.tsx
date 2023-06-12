@@ -23,7 +23,6 @@ type Props = {
 const CommentBox: React.FC<Props> = ({ data }) => {
   return (
     <div className="mt-10">
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="mt-5">
         {CONFIG.utterances.enable && (
           <UtterancesComponent issueTerm={data.id} />
