@@ -27,21 +27,21 @@ const OrderButtons: React.FC<Props> = () => {
         className={`cursor-pointer ${
           currentOrder === "desc"
             ? "text-black font-bold dark:text-white"
-            : "text-gray-500 dark:text-gray-400"
+            : "dark:text-gray-400"
         }`}
         onClick={() => handleClickOrderBy("asc")}
       >
-        <DescIcon className={`stroke-black hover:rounded-md hover:bg-white transition-shadow dark:stroke-white dark:hover:stroke-black dark:hover:bg-gary-300`} alt="now:desc" width="24" height="24" />
+        <DescIcon className={`stroke-black hover:rounded-md hover:bg-gray-200 transition-shadow dark:stroke-white dark:hover:stroke-black dark:hover:bg-sky-400`} alt="now:desc" width="24" height="24" />
       </a>}
       {currentOrder === "asc" && <a
         className={`cursor-pointer ${
           currentOrder === "asc"
             ? "text-black font-bold dark:text-white"
-            : "text-gray-500 dark:text-gray-400"
+            : "dark:text-gray-400"
         }`}
         onClick={() => handleClickOrderBy("desc")}
       >
-        <AscIcon className={`stroke-black hover:rounded-md hover:bg-white transition-shadow dark:stroke-white dark:hover:stroke-black dark:hover:bg-gary-300`} alt="now:asc" width="24" height="24" />
+        <AscIcon className={`stroke-black hover:rounded-md hover:bg-gray-200 transition-shadow dark:stroke-white dark:hover:stroke-black dark:hover:bg-sky-400`} alt="now:asc" width="24" height="24" />
       </a>}
     </div>
   )
