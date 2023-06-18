@@ -32,15 +32,14 @@ const Footer: React.FC<Props> = () => {
           </div>
           <div className="description w-auto flex flex-col">
             <div className="mt-1 text-lg font-black text-gray-700 dark:text-gray-200 group-hover:text-sky-500 dark:group-hover:text-sky-400">
-              @khakiD
+              @{CONFIG.profile.name}
             </div>
-            <p className="break-words sm:break-all leading-5 md:leading-6 text-[16px] mt-2 text-gray-500 dark:text-gray-400 text-base">
-              추억을 지지고 볶을 수 있는 웹 서비스를 개발하고 싶습니다.<span className="block">
-              <b> 사용자 중심의 프론트엔드 개발자</b>{" "}
-              <span className="text-sky-500 dark:text-sky-400 font-bold">
-                카키디
-              </span>{" "}
-              입니다.</span>
+            <p className="break-words leading-5 text-[16px] mt-2 text-gray-500 dark:text-gray-400 text-base">
+              추억을 지지고 볶을 수 있는 웹 서비스를 개발하고 싶습니다.
+              <span className="block">
+               사용자 중심의 프론트엔드 개발자{" "}
+                <span className="text-sky-500 dark:text-sky-400 font-bold">카키디</span>입니다.
+              </span>
             </p>
             <div className="flex gap-1 mt-3 pt-3 justify-start">
               {" "}
