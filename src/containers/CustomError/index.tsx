@@ -8,17 +8,17 @@ type Props = {
 const CustomError: React.FC<Props> = ({ errorType }) => {
   return (
     <div
-      className={`m-auto max-w-4xl bg-white dark:bg-zinc-700 rounded-3xl py-12 px-6 shadow-md`}
+      className={`m-auto max-w-4xl py-12 px-6`}
     >
       <div className="py-20 flex flex-col items-center gap-10">
-        <div className="text-6xl flex  items-center">
-          <div>4</div>
-          <Image src="/images/error.png" width={60} height={60} alt="error" />
-          <div>4</div>
+        <div className="text-6xl flex items-center">
+          <div className='font-bold text-[#ffb029]'>4 </div>
+          <Image src="/images/error.png" width={55} height={55} alt="error" />
+          <div className='font-bold text-[#ffb029]'> 4</div>
         </div>
-        <div className="text-3xl text-gray-500">Post not found</div>
-        <p>노션 API 에러의 가능성이 높습니다.<br/>
-        새로고침을 시도해보세요.</p>
+        <div className="text-3xl font-bold text-gray-500 dark:text-gray-200">Post not found</div>
+        <p className='text-md text-gray-500 text-center'>API 에러일 가능성이 높습니다.<br/>
+          <span className='text-sky-400 font-bold dark:text-sky-500'>🔄 새로고침</span>을 시도해보세요.</p>
       </div>
     </div>
   )
