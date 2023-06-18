@@ -14,7 +14,7 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
   const router = useRouter()
   const [currentPage, setCurrentPage] = useState(1)
   const [filteredPosts, setFilteredPosts] = useState(posts)
-  const postsPerPage = 7
+  const postsPerPage = 8
 
   const currentTag = `${router.query.tag || ``}` || undefined
   const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
@@ -74,14 +74,14 @@ const PostList: React.FC<Props> = ({ q, posts }) => {
 
   return (
     <>
-      <div className="my-2">
+      <div className={`my-2 ${currentPosts.length ? "md:grid md:grid-cols-10 md:gap-8" : ""}`}>
         {!currentPosts.length && (
           <div className="flex justify-center p-5 align-center">
             <p className="text-gray-500 dark:text-gray-300">검색 결과 없음(⊙_⊙;)</p>
-        </div>
+          </div>
         )}
         {currentPosts.map((post) => (
-          <PostCard key={post.id} data={post} />
+          <PostCard key={post.id} data={post}/>
         ))}
       </div>
 

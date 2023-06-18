@@ -25,7 +25,7 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
   //     display: none;
   // }
   return (
-    <div className="block md:grid grid-cols-12 gap-6">
+    <div className="block md:grid md:grid-cols-12 gap-6">
       <div
         className="common-no-scroll-bar sticky top-[81px] hidden lg:block col-span-2 overflow-scroll"
         style={{
@@ -35,7 +35,7 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
         {/* <Lists.CategoryList data={categories} /> */}
         <Lists.TagList data={tags} />
       </div>
-      <div className="col-span-12 lg:col-span-7">
+      <div className="col-span-12 lg:col-span-10">
         <Cards.MobileProfileCard />
         <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
         <Lists.TagList className="flex w-[100%] h-auto lg:hidden" data={tags} />
