@@ -49,7 +49,7 @@ const Feed: React.FC<Props> = ({ categories, tags, posts }) => {
             {/* <Cards.ContactCard /> */}
           </div>
           <div className="col-span-12 lg:col-span-10 ">
-            <Hero className="flex w-[100%] h-auto md:block md:flex-row pt-12 pb-12 w-[100%]" />
+            <Hero className="flex w-[100%] h-auto hidden md:block md:flex-row pt-12 pb-12 w-[100%]" />
             <Cards.MobileProfileCard />
             <SearchInput value={q} onChange={(e) => setQ(e.target.value)} />
             <Lists.TagList
