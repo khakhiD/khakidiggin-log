@@ -16,8 +16,6 @@ const ProfileCard: React.FC<Props> = ({ className }) => {
                 className="rounded-full"
                 src="https://avatars.githubusercontent.com/u/74141521?v=4"
                 alt="profile-image"
-                width={200}
-                height={200}
                 layout="fill"
           />
         </div>
