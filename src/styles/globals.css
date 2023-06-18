@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 @font-face {
   font-family: "Inter";
   src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -12,7 +12,7 @@
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 html {
   font-family: "Pretendard", "Nexon Lv2 Gothic", "Inter", "Roboto", sans-serif;
