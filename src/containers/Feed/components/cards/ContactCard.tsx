@@ -10,7 +10,7 @@ import {
 const ContactCard: React.FC = () => {
   return (
     <>
-      <ul className="rounded-2xl p-1 flex flex-col">
+      <div className="rounded-2xl p-1 flex flex-col">
         {CONFIG.profile.github && (
           <a
             href={`https://github.com/${CONFIG.profile.github}`}
@@ -19,7 +19,7 @@ const ContactCard: React.FC = () => {
             className="p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-2xl cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white "
           >
             <AiOutlineGithub className="text-2xl" />
-            <div className="text-sm">github</div>
+            {/* <div className="text-sm">github</div> */}
           </a>
         )}
         {CONFIG.profile.instagram && (
@@ -30,7 +30,7 @@ const ContactCard: React.FC = () => {
             className="p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-2xl cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
           >
             <AiOutlineInstagram className="text-2xl" />
-            <div className="text-sm">instagram</div>
+            {/* <div className="text-sm">instagram</div> */}
           </a>
         )}
         {CONFIG.profile.email && (
@@ -41,7 +41,7 @@ const ContactCard: React.FC = () => {
             className="overflow-hidden p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-2xl cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
           >
             <AiOutlineMail className="text-2xl flex-shrink-0" />
-            <div className="text-sm">email</div>
+            {/* <div className="text-sm">email</div> */}
           </a>
         )}
         {CONFIG.profile.linkedin && (
@@ -52,10 +52,10 @@ const ContactCard: React.FC = () => {
             className="overflow-hidden p-3 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded-2xl cursor-pointer flex items-center gap-3 text-gray-500 dark:text-white hover:text-black dark:hover:text-white"
           >
             <AiFillLinkedin className="text-2xl flex-shrink-0" />
-            <div className="text-sm">linkedin</div>
+            {/* <div className="text-sm">linkedin</div> */}
           </a>
         )}
-      </ul>
+      </div>
     </>
   )
 }
