@@ -8,6 +8,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Hack';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/fonts/hack-regular.woff') format('woff');
+  font-weight: normal;
+  font-size: normal;
+}
 /* 
 @font-face {
   font-family: 'VitroCore';
