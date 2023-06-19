@@ -1,11 +1,15 @@
 import { CONFIG } from "@/site.config"
 import Link from "next/link"
-import { AiFillLinkedin, AiFillMail, AiFillGithub } from "react-icons/ai"
+import { AiFillLinkedin, AiFillMail, AiFillGithub, AiOutlineUser, AiOutlineInfoCircle } from "react-icons/ai"
+import { SiAboutdotme } from "react-icons/si"
 
 const NavBar: React.FC = () => {
-  const links = [{ id: 1, name: "About", to: "/about" },
-                { id: 2, name: "Github", to: `https://github.com/${CONFIG.profile.github}`, icon: <AiFillGithub />},
-                { id: 3, name: "LinkedIn", to: `https://linked.in/in/${CONFIG.profile.linkedin}`, icon: <AiFillLinkedin/>}]
+  const links = [
+    { id: 1, name: "About", to: "/about", icon: <SiAboutdotme /> },
+    { id: 2, name: "Github", to: `https://github.com/${CONFIG.profile.github}`, icon: <AiFillGithub />},
+    { id: 3, name: "LinkedIn", to: `https://linked.in/in/${CONFIG.profile.linkedin}`, icon: <AiFillLinkedin/>},
+  ]
+  
   return (
     <div className="flex-shrink-0">
       <ul className="flex flex-row">
