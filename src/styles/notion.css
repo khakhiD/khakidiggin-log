@@ -107,7 +107,8 @@ pre[class*="language-"] {
 }
 
 .notion-quote span[class*="_background"],
-.notion-text > [class$="_background"] {
+.notion-text [class*="_background"],
+.notion-text span[class*="_background"] {
   @apply text-gray-700;
   @apply px-1
 }
