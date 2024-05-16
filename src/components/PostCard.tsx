@@ -19,7 +19,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
         <a>
           <article
             key={data.id}
-            className="group relative overflow-hidden mb-6 rounded-2xl bg-white dark:bg-zinc-900"
+            className="group relative overflow-hidden mb-3 rounded-lg bg-white dark:bg-zinc-900"
           >
             {category && (
               <Category className="absolute top-4 right-4 z-10">
@@ -27,7 +27,7 @@ const PostCard: React.FC<Props> = ({ data }) => {
               </Category>
             )}
             {data.thumbnail && (
-              <div className="relative w-full pb-[66%] lg:pb-[60%] bg-white overflow-hidden dark:bg-zinc-900 rounded-2xl cursor-pointer">
+              <div className="relative w-full pb-[66%] lg:pb-[60%] bg-white overflow-hidden dark:bg-zinc-900 rounded-lg cursor-pointer">
                 <Image
                   src={data.thumbnail}
                   alt={data.title}
