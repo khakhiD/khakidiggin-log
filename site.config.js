@@ -3,9 +3,9 @@ const CONFIG = {
   profile: {
     name: "khakiD",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "Frontend Digger",
-    bio: "Open Heart / Moderation",
-    email: "kakkiid@kakao.com",
+    role: "Dongho",
+    bio: "Moderation",
+    email: "bfwanso@naver.com",
     linkedin: "dongho-shin-1b5147244",
     github: "khakhid",
     instagram: "",
@@ -18,8 +18,8 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "khakidigginlog💦",
-    description: "카키디 프론트엔드 개발 블로그",
+    title: "digging-log",
+    description: "카키디 개발 블로그",
     theme: "auto", // ['light', 'dark', 'auto']
   },
 
@@ -27,7 +27,8 @@ const CONFIG = {
   link: "https://khakidiggin-log.vercel.app",
   since: 2023, // If leave this empty, current year will be used.
   lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
-  ogImageGenerateURL: "https://raw.githubusercontent.com/khakhiD/khakidiggin-log/main/public/images/ogp-image.png", // The link to generate OG image, don't end with a slash
+  ogImageGenerateURL:
+    "https://raw.githubusercontent.com/khakhiD/khakidiggin-log/main/public/images/ogp-image.png", // The link to generate OG image, don't end with a slash
   seo: {
     keywords: ["Blog", "Website", "Notion"],
   },
