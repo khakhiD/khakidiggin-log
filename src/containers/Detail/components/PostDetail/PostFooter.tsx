@@ -8,10 +8,10 @@ type Props = {}
 
 const description = [
   {
-    lg: '추억을 지지고 볶을 수 있는 웹 서비스를 개발하고 싶습니다.<br /><b>사용자 중심의 프론트엔드 개발자</b> <span className="text-sky-500 dark:text-sky-400 font-bold">카키디</span> 입니다.',
+    lg: '직관에 근거를 더하기 위해 학습하고 공유합니다.<br /><b>사용자 중심의 프론트엔드 개발자</b> <span className="text-sky-500 dark:text-sky-400 font-bold">카키디</span> 입니다.',
   },
   {
-    sm: '추억을 지지고 볶을 수 있는<br/>웹 섭비스를 개발하고 싶습니다.<br/><b>사용자 중심의 프론트엔드 개발자</b><br/><span className="text-sky-500 dark:text-sky-400 font-bold">카키디</span> 입니다.',
+    sm: '직관에 근거를 더하기 위해<br/>학습하고 공유합니다.<br/><b>사용자 중심의 프론트엔드 개발자</b><br/><span className="text-sky-500 dark:text-sky-400 font-bold">카키디</span> 입니다.',
   },
 ]
 
@@ -35,10 +35,13 @@ const Footer: React.FC<Props> = () => {
               @{CONFIG.profile.name}
             </div>
             <p className="break-words leading-5 text-[16px] mt-2 text-gray-500 dark:text-gray-400 text-base">
-              추억을 지지고 볶을 수 있는 웹 서비스를 개발하고 싶습니다.
+              직관에 근거를 더하기 위해 학습하고 공유합니다.
               <span className="block">
-               사용자 중심의 프론트엔드 개발자{" "}
-                <span className="text-sky-500 dark:text-sky-400 font-bold">카키디</span>입니다.
+                사용자 중심의 프론트엔드 개발자{" "}
+                <span className="text-sky-500 dark:text-sky-400 font-bold">
+                  카키디
+                </span>
+                입니다.
               </span>
             </p>
             <div className="flex gap-1 mt-3 pt-3 justify-start">
