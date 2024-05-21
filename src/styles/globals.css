@@ -2,49 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'VitroInspire';
-  src: url('/fonts/VITRO_INSPIRE_OTF.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-/* 
-@font-face {
-  font-family: 'VitroCore';
-  font-weight: normal;
-  font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.eot?#iefix') format('embedded-opentype'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.woff2') format('woff2'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.woff') format('woff'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroCore.ttf') format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'VitroPride';
-  font-weight: normal;
-  font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.eot?#iefix') format('embedded-opentype'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.woff2') format('woff2'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.woff') format('woff'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/vitro/VitroPride.ttf') format("truetype");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GmarketSans';
-  font-weight: 700;
-  font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
-       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
-       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
-       url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
-  font-display: swap;
-}  */
-
 html {
   font-family: "Pretendard", "Nexon Lv2 Gothic", "Inter", "Roboto", sans-serif;
   --scrollbarBG: #ffffff00;
