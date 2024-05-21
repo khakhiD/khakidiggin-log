@@ -19,11 +19,25 @@
   @apply w-full;
 }
 
-.notion-list li {
-  @apply py-0;
+.notion-list {
+  padding-inline-start: 1.5em;
 }
+
+.notion-list li {
+  @apply py-0 pl-0;
+}
+
 .notion-page-link {
   color: inherit;
+}
+
+.notion-callout {
+  @apply py-3 pl-2 pr-3 border-slate-200 dark:border-zinc-500;
+}
+
+.notion-page-icon {
+  font-family: Freesentation;
+  font-size: 0.9em;
 }
 
 svg.notion-page-icon {
@@ -35,8 +49,8 @@ svg + .notion-page-title-text {
 }
 
 .notion-bookmark {
-  @apply rounded-md border;
-  @apply border-gray-300 dark:border-gray-600;
+  @apply border;
+  @apply border-slate-200 dark:border-zinc-500;
   color: inherit;
 }
 
@@ -47,6 +61,24 @@ svg + .notion-page-title-text {
 
 .notion-bookmark .notion-bookmark-description {
   @apply text-gray-600 dark:text-gray-300;
+}
+
+.notion-code {
+  @apply bg-zinc-900;
+}
+
+.notion-code > code {
+  @apply text-gray-700 dark:text-gray-100;
+}
+
+.notion-inline-code {
+  @apply text-gray-700 dark:text-gray-100;
+}
+
+pre[class*="language-"] {
+  line-height: inherit;
+  overflow-x: scroll;
+  overflow-y: hideen;
 }
 
 .notion-bookmark:hover {
@@ -68,8 +100,8 @@ svg + .notion-page-title-text {
   @apply overflow-auto;
 }
 .notion-quote {
-  font-size: 1em;
   padding: 0.2em 0.9em;
+  border-left: 2px solid currentColor;
 }
 .notion-collection {
   @apply max-w-full;
@@ -91,8 +123,10 @@ svg + .notion-page-title-text {
 }
 
 .notion-hr {
-  /* border-top: 1px solid rgba(55, 53, 47, 0.16); */
-  @apply border border-gray-200 dark:border-gray-400;
+  @apply dark:border-t-gray-500;
+}
+.notion-hr {
+  border-top: 1px solid rgba(55, 53, 47, 0.16);
 }
 
 .notion-quote span[class*="_background"],
@@ -102,14 +136,11 @@ svg + .notion-page-title-text {
   @apply px-1;
 }
 
-.notion-callout {
-  @apply border rounded-md pl-2 border-gray-300 dark:border-gray-500;
-}
-
 /* Code 부분 */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  @apply bg-white dark:bg-zinc-900 rounded-md border border-zinc-300 dark:border-zinc-500;
+  @apply bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-500;
+  @apply rounded-md;
 }
 
 .token.operator,
