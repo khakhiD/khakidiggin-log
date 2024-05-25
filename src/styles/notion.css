@@ -23,7 +23,8 @@
   padding-inline-start: 1.5em;
 }
 
-.notion-list li {
+.notion-list li,
+.notion-list ol {
   @apply py-0 pl-0;
 }
 
@@ -176,4 +177,8 @@ pre[class*="language-"] {
   transform: scale(0.8);
   top: 5px;
   right: 5px;
+}
+
+span[class^="notion-"][class$="_background"] {
+  @apply dark:text-zinc-700;
 }
