@@ -2,7 +2,7 @@
 
 .notion {
   font-family: Pretendard, Inter, Roboto, sans-serif;
-  font-size: 1.05em;
+  font-size: 1em;
   @apply text-gray-600 dark:text-gray-200;
   overflow-wrap: break-word;
 }
