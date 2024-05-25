@@ -1,13 +1,25 @@
-@font-face {
-  font-family: "VitroInspire";
+/* @font-face {
+  font-family: "VitroInspire-Subset";
   src: url("/fonts/VITRO_INSPIRE_OTF.otf") format("opentype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "VitroInspire-Subset";
+  src: url("/fonts/subset-VITROINSPIREOTF-Regular.woff2") format("woff2"),
+    url("/fonts/subset-VITROINSPIREOTF-Regular.woff") format("woff"),
+    url ("/fonts/VITRO_INSPIRE_OTF.otf") format("opentype");
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-1Thin.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 100;
   font-style: normal;
 }
@@ -15,6 +27,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-2ExtraLight.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 200;
   font-style: normal;
 }
@@ -22,6 +35,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-3Light.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 300;
   font-style: normal;
 }
@@ -29,6 +43,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-4Regular.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 400;
   font-style: normal;
 }
@@ -36,6 +51,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-5Medium.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 500;
   font-style: normal;
 }
@@ -43,6 +59,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-6SemiBold.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 600;
   font-style: normal;
 }
@@ -50,6 +67,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-7Bold.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 700;
   font-style: normal;
 }
@@ -57,6 +75,7 @@
 @font-face {
   font-family: "Freesentation";
   src: url("/fonts/Freesentation-8ExtraBold.ttf") format("truetype");
+  font-display: fallback;
   font-weight: 800;
   font-style: normal;
 }
@@ -66,4 +85,4 @@
   src: url("/fonts/Freesentation-9Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-}
+} */

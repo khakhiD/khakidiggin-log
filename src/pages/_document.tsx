@@ -7,6 +7,18 @@ class MyDocument extends Document {
       <Html lang={CONFIG.lang}>
         <Head>
           <link
+            rel="preload"
+            href="/fonts/subset-VITROINSPIREOTF-Regular.woff2"
+            as="font"
+            type="font/woff2"
+          />
+          <link
+            rel="preload"
+            href="/fonts/subset-VITROINSPIREOTF-Regular.woff"
+            as="font"
+            type="font/woff"
+          />
+          <link
             rel="stylesheet"
             as="font"
             href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
