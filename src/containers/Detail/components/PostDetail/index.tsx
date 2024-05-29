@@ -77,7 +77,7 @@ const mapPageUrl = (id: string) => {
 type Props = {
   blockMap: any
   data: TPost
-  tableOfContents: Array<TableOfContentsEntry>
+  tableOfContents?: Array<TableOfContentsEntry>
 }
 
 const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
