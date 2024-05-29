@@ -31,3 +31,9 @@ export type TCategories = {
 }
 
 export type ThemeType = "dark" | "light"
+
+export type THeading = {
+  id: string
+  title: string
+  level: number
+}
