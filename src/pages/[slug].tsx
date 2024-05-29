@@ -6,6 +6,7 @@ import { NextPageWithLayout } from "@pages/_app"
 import { TPost } from "../types"
 import CustomError from "@containers/CustomError"
 import { getPostBlocks, getPosts } from "@libs/apis"
+import { getTableOfContents } from "../libs/utils/notion/getTableOfContents"
 
 export async function getStaticPaths() {
   const posts = await getPosts()
@@ -26,9 +27,10 @@ export async function getStaticProps({ params: { slug } }: any) {
     const posts = await getPosts()
     const post = posts.find((t) => t.slug === slug)
     const blockMap = await getPostBlocks(post?.id!)
+    const tableOfContents = await getTableOfContents(blockMap)
 
     return {
-      props: { post, blockMap },
+      props: { post, blockMap, tableOfContents },
       revalidate: 1,
     }
   } catch (error) {
