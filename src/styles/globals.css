@@ -4,6 +4,7 @@
 
 html {
   font-family: "Pretendard", "Nexon Lv2 Gothic", "Inter", "Roboto", sans-serif;
+  scroll-behavior: smooth;
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
 }
