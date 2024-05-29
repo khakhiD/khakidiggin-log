@@ -89,7 +89,11 @@ const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
 
     Object.keys(blocks).forEach((key) => {
       const block = blocks[key].value
-      if (block.type === "header" || block.type === "sub_header") {
+      if (
+        block.type === "header" ||
+        block.type === "sub_header" ||
+        block.type === "sub_sub_header"
+      ) {
         const level =
           block.type === "header" ? 0 : block.type === "sub_header" ? 1 : 2
         extractedHeadings.push({
