@@ -108,11 +108,14 @@ const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
   }, [blockMap])
 
   const category = (data.category && data.category?.[0]) || undefined
-
   return (
     <div className={`m-auto max-w-5xl py-12 px-1 md:px-6 md:mb-6`}>
       <div className="grid grid-cols-1 lg:grid-cols-8 gap-4">
-        <article className="lg:col-span-6 m-auto max-w-2xl">
+        <article
+          className={`${
+            data.status[0] === "PublicOnDetail" && "lg:col-span-8"
+          } lg:col-span-6 m-auto max-w-2xl`}
+        >
           {category && (
             <Category
               className="mb-2"
@@ -146,8 +149,8 @@ const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
             </>
           )}
         </article>
-        {headings.length > 0 && (
-          <aside className="lg:col-span-2">
+        {data.status[0] !== "PublicOnDetail" && headings.length > 0 && (
+          <aside className="hidden lg:block lg:col-span-2">
             <TableOfContents headings={headings} />
           </aside>
         )}
