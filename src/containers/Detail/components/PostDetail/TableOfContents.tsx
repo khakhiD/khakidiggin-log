@@ -1,6 +1,6 @@
 import { THeading } from "@/src/types"
-import { useEffect, useState } from "react"
 import Link from "next/link"
+import useScrollSpy from "@/src/hooks/useScrollSpy"
 
 type Props = {
   headings: THeading[]
@@ -29,66 +29,12 @@ const getIndentStyle = (headingLevel: number) => {
 }
 
 const TableOfContents: React.FC<Props> = ({ headings }) => {
-  const [activeId, setActiveId] = useState<string>("")
-
-  // useEffect(() => {
-  //   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         setActiveId(entry.target.getAttribute("data-id") || "")
-  //       }
-  //     })
-  //   }
-
-  //   const observer = new IntersectionObserver(handleIntersection, {
-  //     rootMargin: "0px 0px -40% 0px",
-  //     threshold: 0.1,
-  //   })
-
-  //   headings.forEach(({ id }) => {
-  //     const element = document.querySelector(`[data-id="${id}"]`)
-  //     if (element) {
-  //       observer.observe(element)
-  //     }
-  //   })
-
-  //   return () => {
-  //     headings.forEach(({ id }) => {
-  //       const element = document.querySelector(`[data-id="${id}"]`)
-  //       if (element) {
-  //         observer.unobserve(element)
-  //       }
-  //     })
-  //   }
-  // }, [headings])
-
-  //   <Link
-  //   href={`#${getTocLink(heading.id)}`}
-  //   key={heading.id}
-  //   scroll={false}
-  //   passHref
-  // >
-  //   <li
-  //     className={`text-sm tracking-tighter hover:-translate-y-[1px] transition duration-200 mb-3`}
-  //   >
-  //     <a
-  //       className={`${
-  //         activeId === heading.id
-  //           ? "text-blue-500 font-bold"
-  //           : "text-zinc-700 dark:text-zinc-300"
-  //       } pl-${heading.level * 2} -indent-${
-  //         heading.level * 2
-  //       } hover:text-blue-500 hover:dark:text-blue-500 transition duration-200`}
-  //     >
-  //       {heading.title}
-  //     </a>
-  //   </li>
-  // </Link>
+  const activeId = useScrollSpy()
 
   return (
     <nav className="inline-block lg:sticky lg:top-40">
       <div className="border-l border-zinc-200 dark:border-zinc-500">
-        <ul className="ml-3 list-outside">
+        <ul className="list-outside">
           {headings.map((heading) => (
             <Link
               href={`#${getTocLink(heading.id)}`}
@@ -97,16 +43,19 @@ const TableOfContents: React.FC<Props> = ({ headings }) => {
               passHref
             >
               <li
-                className={`mb-3 text-sm list-outside tracking-tighter hover:-translate-y-[1px] transition duration-200 cursor-pointer`}
+                id={heading.id}
+                className={`mb-3 text-sm list-outside tracking-tighter hover:-translate-y-[1px] transition duration-200 cursor-pointer
+                ${
+                  activeId === getTocLink(heading.id)
+                    ? "pl-1 border-l-2 border-blue-400 transition duration-200"
+                    : "pl-2"
+                }
+                `}
               >
                 <a
-                  className={`block hover:text-blue-500 hover:dark:text-blue-500 transition duration-200
+                  className={`block text-zinc-700 dark:text-zinc-300 hover:text-blue-500 hover:dark:text-blue-500 transition duration-200
                   ${getIndentStyle(heading.level)}
-                ${
-                  activeId === heading.id
-                    ? "text-blue-500 font-bold"
-                    : "text-zinc-700 dark:text-zinc-300"
-                }`}
+                  ${activeId === getTocLink(heading.id) && "font-bold"}`}
                 >
                   {heading.title}
                 </a>
