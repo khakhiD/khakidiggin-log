@@ -108,13 +108,15 @@ const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
   }, [blockMap])
 
   const category = (data.category && data.category?.[0]) || undefined
+  const tocVisible = data.status[0] !== "PublicOnDetail" && headings.length > 0
+
   return (
     <div className={`m-auto max-w-5xl py-12 px-1 md:px-6 md:mb-6`}>
-      <div className="grid grid-cols-1 lg:grid-cols-8 gap-4">
+      <div className="block lg:grid lg:grid-cols-8 gap-4">
         <article
           className={`${
             data.status[0] === "PublicOnDetail" && "lg:col-span-8"
-          } lg:col-span-6 m-auto max-w-2xl`}
+          } lg:col-span-6 m-auto max-w-xl`}
         >
           {category && (
             <Category
@@ -125,6 +127,11 @@ const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
             </Category>
           )}
           {data.type[0] === "Post" && <PostHeader data={data} />}
+          {tocVisible && (
+            <div className="block lg:hidden">
+              <TableOfContents headings={headings} />
+            </div>
+          )}
           {blockMap && (
             <div className="-mt-4">
               <NotionRenderer
@@ -149,7 +156,7 @@ const PostDetail: React.FC<Props> = ({ blockMap, data, tableOfContents }) => {
             </>
           )}
         </article>
-        {data.status[0] !== "PublicOnDetail" && headings.length > 0 && (
+        {tocVisible && (
           <aside className="hidden lg:block lg:col-span-2">
             <TableOfContents headings={headings} />
           </aside>
