@@ -7,7 +7,7 @@ const SearchInput: React.FC<Props> = ({ ...props }) => {
     <div className="mb-4 md:mb-8">
       {/* <div className="p-1 mb-3 dark:text-white">🔎 Search</div> */}
       <input
-        className="rounded-lg px-10 py-2 w-full bg-gray-200 dark:bg-zinc-700 dark:text-white focus:bg-white focus:shadow-md dark:focus:bg-white dark:focus:shadow-md dark:focus:text-gray-600 outline-none transition"
+        className="rounded-lg px-10 py-2 w-full bg-gray-100 dark:bg-zinc-700 dark:text-white focus:bg-white focus:shadow-md dark:focus:bg-white dark:focus:shadow-md dark:focus:text-gray-600 outline-none transition"
         type="text"
         placeholder="Search Keyword..."
         {...props}
