@@ -3,7 +3,7 @@
 .notion {
   font-family: Pretendard, Inter, Roboto, sans-serif;
   font-size: 1em;
-  @apply text-gray-600 dark:text-gray-200;
+  @apply text-gray-800 dark:text-gray-200;
   overflow-wrap: break-word;
 }
 .notion,
@@ -61,7 +61,7 @@ svg + .notion-page-title-text {
 }
 
 .notion-bookmark .notion-bookmark-description {
-  @apply text-gray-600 dark:text-gray-300;
+  @apply text-gray-800 dark:text-gray-300;
 }
 
 .notion-code {
@@ -69,11 +69,11 @@ svg + .notion-page-title-text {
 }
 
 .notion-code > code {
-  @apply text-gray-700 dark:text-gray-100;
+  @apply text-gray-800 dark:text-gray-100;
 }
 
 .notion-inline-code {
-  @apply text-gray-700 dark:text-gray-100;
+  @apply text-gray-800 dark:text-gray-100;
 }
 
 pre[class*="language-"] {
@@ -141,7 +141,7 @@ pre[class*="language-"] {
 /* Code 부분 */
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  @apply bg-slate-50 dark:bg-zinc-900 border border-slate-200 dark:border-zinc-500;
+  @apply bg-slate-50 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-500;
   @apply rounded-md;
 }
 
