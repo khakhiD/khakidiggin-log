@@ -12,13 +12,13 @@ const CONFIG = {
   },
   projects: [
     {
-      name: `khakidiggin-log`,
+      name: `Dongho-Log`,
       href: "https://github.com/khakhid/khakidiggin-log",
     },
   ],
   // blog setting (required)
   blog: {
-    title: "digging-log",
+    title: "Dongho-Log",
     description: "카키디 개발 블로그",
     theme: "auto", // ['light', 'dark', 'auto']
   },
