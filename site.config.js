@@ -3,7 +3,7 @@ const CONFIG = {
   profile: {
     name: "khakiD",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
-    role: "Dongho",
+    role: "Developer",
     bio: "Moderation",
     email: "bfwanso@naver.com",
     linkedin: "dongho-shin-1b5147244",
@@ -12,14 +12,14 @@ const CONFIG = {
   },
   projects: [
     {
-      name: `Dongho-Log`,
+      name: `dongho-log`,
       href: "https://github.com/khakhid/khakidiggin-log",
     },
   ],
   // blog setting (required)
   blog: {
-    title: "Dongho-Log",
-    description: "카키디 개발 블로그",
+    title: "dongho-log",
+    description: "카키디 기술 블로그",
     theme: "auto", // ['light', 'dark', 'auto']
   },
 
