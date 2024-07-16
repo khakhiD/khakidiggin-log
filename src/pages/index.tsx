@@ -7,9 +7,8 @@ import Feed from "@containers/Feed"
 import { CONFIG } from "../../site.config"
 import { NextPageWithLayout } from "./_app"
 import { TCategories, TPosts, TTags } from "../types"
-import { getPosts } from "../libs/apis"
+import { getPosts, generateRssFeed } from "../libs/apis"
 import { DEFAULT_CATEGORY } from "../constants"
-import { generateRssFeed } from "../libs/apis/generateRssFeed"
 
 export async function getStaticProps() {
   try {
