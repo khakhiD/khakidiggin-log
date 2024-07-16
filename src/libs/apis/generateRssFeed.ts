@@ -6,8 +6,8 @@ import fs from "fs/promises"
 export async function generateRssFeed() {
   const feed = new RSS({
     title: "dongho-log",
-    site_url: "https://dongho.xyz",
-    feed_url: "https://dongho.xyz/rss.xml",
+    site_url: "https://www.dongho.xyz",
+    feed_url: "https://www.dongho.xyz/rss.xml",
     description: "신동호 기술 블로그",
   })
 
@@ -22,7 +22,7 @@ export async function generateRssFeed() {
     publicPosts.map((post) => {
       feed.item({
         title: post.title,
-        url: `https://dongho.xyz/${post.slug}`,
+        url: `https://www.dongho.xyz/${post.slug}`,
         date: post.createdTime,
         description: post.summary ?? "",
       })
