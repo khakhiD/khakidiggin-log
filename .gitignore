@@ -37,3 +37,7 @@ yarn-error.log*
 # public/sitemap.xml
 
 /.firebase
+
+sitemap.xml
+robots.txt
+rss.xml
