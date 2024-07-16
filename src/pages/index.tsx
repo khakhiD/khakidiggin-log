@@ -9,6 +9,7 @@ import { NextPageWithLayout } from "./_app"
 import { TCategories, TPosts, TTags } from "../types"
 import { getPosts } from "../libs/apis"
 import { DEFAULT_CATEGORY } from "../constants"
+import { generateRssFeed } from "../libs/apis/generateRssFeed"
 
 export async function getStaticProps() {
   try {
@@ -16,6 +17,7 @@ export async function getStaticProps() {
     const filteredPost = filterPosts(posts)
     const tags = getAllSelectItemsFromPosts("tags", filteredPost)
     const categories = getAllSelectItemsFromPosts("category", filteredPost)
+    generateRssFeed() // TODO 매번 생성하지 않도록 캐싱 또는 주기적으로 생성하도록 하게 수정
 
     return {
       props: {
