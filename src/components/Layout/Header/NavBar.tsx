@@ -42,7 +42,7 @@ const NavBar: React.FC = () => {
         {links.map((link) => (
           <li
             key={link.id}
-            className="block ml-4 text-gray-500 dark:text-white nav"
+            className="block ml-4 text-gray-700 dark:text-white nav"
           >
             <Link href={link.to}>
               <a
