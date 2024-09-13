@@ -182,3 +182,7 @@ pre[class*="language-"] {
 span[class^="notion-"][class$="_background"] {
   @apply dark:text-zinc-700;
 }
+
+.notion-asset-wrapper-image img {
+  border-radius: 9px;
+}
