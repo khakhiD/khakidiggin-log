@@ -23,7 +23,7 @@ const getIndentStyle = (headingLevel: number) => {
     case 1:
       return "pl-2"
     case 2:
-      return "pl-4"
+      return "pl-4 hidden"
     default:
       return "pl-0"
   }
